@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "2c3a677b-a48f-48b6-9a6c-010cf401ecf1",
+		"name": "biblioteca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get",
+			"item": [
+				{
+					"name": "traer lista libros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/api/v1/books",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "traer lista libros",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/api/v1/books",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\" : 200,\n    \"error\" : null,\n    \"data\" : [\n        {\n            \"id\" : 1,\n            \"name\" : \"100 años de soledad\",\n            \"author\" : \"Gabriel garcia Marques\",\n            \"image\" : \"https://imagessl8.casadellibro.com/a/l/t5/08/9788497592208.jpg\"\n        },\n        {\n            \"id\" : 2,\n            \"name\" : \"100 años de soledad\",\n            \"author\" : \"Gabriel garcia Marques\",\n            \"image\" : \"https://imagessl8.casadellibro.com/a/l/t5/08/9788497592208.jpg\"\n        },\n        {\n            \"id\" : 3,\n            \"name\" : \"100 años de soledad\",\n            \"author\" : \"Gabriel garcia Marques\",\n            \"image\" : \"https://imagessl8.casadellibro.com/a/l/t5/08/9788497592208.jpg\"\n        },\n        {\n            \"id\" : 4,\n            \"name\" : \"100 años de soledad\",\n            \"author\" : \"Gabriel garcia Marques\",\n            \"image\" : \"https://imagessl8.casadellibro.com/a/l/t5/08/9788497592208.jpg\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "traer detalle libro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/api/v1/book/{{bookId}}",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"book",
+								"{{bookId}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "traer detalle libro",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": null
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"100 años de soledad\",\n    \"author\": \"Gabriel garcia Marques\",\n    \"image\": \"https://imagessl8.casadellibro.com/a/l/t5/08/9788497592208.jpg\",\n    \"pages\": 1000,\n    \"ISBN\": \"asdkajsngkjadsfglkj\",\n    \"resume\" : \" no se me ocurre nada\",\n    \"copys_availables\" : 3\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "delete",
+			"item": [
+				{
+					"name": "borrar libros",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/api/v1/books",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "borrar libros",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/api/v1/books",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\" : 200,\n    \"error\" : null,\n    \"data\" : {\n        \"message\" : \"Se ha eliminado correctamente\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "guardar un  libro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/api/v1/books/save",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"books",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "guardar un  libro",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/api/v1/books/save",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"books",
+										"save"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"error\": null,\n    \"data\": {\n        \"message\": \"Se ha guardado\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "push",
+			"item": []
+		}
+	]
+}
